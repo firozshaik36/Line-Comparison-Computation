@@ -6,7 +6,7 @@ public class LineComparisonComputation
     {
         int x1,x2,y1,y2;
 
-        double dis;
+        double length;
 
         Scanner sc=new Scanner(System.in);
 
@@ -26,9 +26,9 @@ public class LineComparisonComputation
 
         y2=sc.nextInt();
 
-        dis=Math.sqrt((x2-x1)^2 + (y2-y1)^2);
+        length=Math.sqrt((x2-x1)^2 + (y2-y1)^2);
 
-        System.out.println("Length of Lines is : "+"("+x1+","+y1+"),"+"("+x2+","+y2+")===>"+dis);
+        System.out.println("Length of Lines is : "+"("+x1+","+y1+"),"+"("+x2+","+y2+")===>"+length);
 
 
     }
