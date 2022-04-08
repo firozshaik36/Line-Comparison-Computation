@@ -5,7 +5,7 @@ public class LineComparisonComputation
     public static void main(String args[]) {
         int x1, x2, y1, y2;
 
-        double length1;
+        double length;
 
 
         Scanner sc = new Scanner(System.in);
@@ -26,10 +26,10 @@ public class LineComparisonComputation
 
         y2 = sc.nextInt();
 
-        length1 = Math.sqrt((x2 - x1) ^ 2 + (y2 - y1) ^ 2);
+        length = Math.sqrt((x2 - x1) ^ 2 + (y2 - y1) ^ 2);
 
 
-        System.out.println("Length of Lines is : " + "(" + x1 + "," + y1 + ")," + "(" + x2 + "," + y2 + ")===>" + length1);
+        System.out.println("Length of Lines is : " + "(" + x1 + "," + y1 + ")," + "(" + x2 + "," + y2 + ")===>" + length);
 
         System.out.println(" Checking Equality of Two Lengths:");
         System.out.println(x1 + " == " + y1 + " : " + (x1 == y1));
