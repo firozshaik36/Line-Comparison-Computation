@@ -30,8 +30,12 @@ public class LineComparisonComputation
 
 
         System.out.println("Length of Lines is : " + "(" + x1 + "," + y1 + ")," + "(" + x2 + "," + y2 + ")===>" + length1);
+
+        System.out.println(" Checking Equality of Two Lengths:");
         System.out.println(x1 + " == " + y1 + " : " + (x1 == y1));
         System.out.println(x2 + " == " + y2 + " : " + (x2 == y2));
+
+
 
     }
 
