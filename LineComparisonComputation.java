@@ -35,6 +35,14 @@ public class LineComparisonComputation
         System.out.println(x1 + " == " + y1 + " : " + (x1 == y1));
         System.out.println(x2 + " == " + y2 + " : " + (x2 == y2));
 
+        System.out.println(" Comparing Two Lengths:");
+
+        System.out.println(x1.compareTo(y1));
+        System.out.println(y2.compareTo(x2));
+
+
+
+
 
 
     }
