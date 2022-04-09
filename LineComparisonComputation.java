@@ -1,61 +1,68 @@
-import java.util.Scanner;
+import java.lang.Math;
+import java.util.*;
 
-public class LineComparisonComputation
+public class LineComaprisonComputation
 {
-    public static void main(String args[]) {
-        int x1, x2, y1, y2;
+	private double LengthOfLine1;
+	private double LengthOfLine2;
 
-        double length;
+	private int x1;
+	private int x2;
+	private int x3;
+	private int x4;
 
+	private int y1;
+	private int y2;
+	private int y3;
+	private int y4;
 
-        Scanner sc = new Scanner(System.in);
+	public void readCoordinates()
+	{
+		Scanner sc1 = new Scanner(System.in);
 
-        System.out.println("enter x1 point");
+		System.out.println("Read X coordinates");
+		x1 = sc1.nextInt();
+		x2 = sc1.nextInt();
+		x3 = sc1.nextInt();
+		x4 = sc1.nextInt();
+		System.out.println("Read Y coordinates");
+		y1 = sc1.nextInt();
+		y2 = sc1.nextInt();
+		y3 = sc1.nextInt();
+		y4 = sc1.nextInt();
 
-        x1 = sc.nextInt();
+	}
 
-        System.out.println("enter y1 point");
+	public void calculateLenght()
+	{
+		LengthOfLine1 = Math.sqrt((x2-x1)^2 + (y2-y1)^2);
+		System.out.println("Length of line 1 is: " +LengthOfLine1);
 
-        y1 = sc.nextInt();
+		LengthOfLine2 = Math.sqrt((x4-x3)^2 + (y4-y3)^2);
+		System.out.println("Length of line 2 is: " +LengthOfLine2);
 
-        System.out.println("enter x2point");
+	}
+	public void compareTwoLine()
+	{
+		Double obj1 = new Double(LengthOfLine1);
+		Double obj2 = new Double(LengthOfLine2);
 
-        x2 = sc.nextInt();
+		int compare = obj1.compareTo(obj2);
 
-        System.out.println("enter y2 point");
+		if(compare == 1)
+			System.out.println("Line 1 is gretter than Line 2");
+		else if(compare == -1)
+			System.out.println("Line 1 is less than Line 2");
+		else if(compare == 0)
+		System.out.println("Line1 and Line2 are equals");
+	}
+	public static void main(String[] args)
+	{
 
-        y2 = sc.nextInt();
+		LineComaprison L1 = new LineComaprison();
+		L1.readCoordinates();
+		L1.calculateLenght();
+		L1.compareTwoLine();
 
-        length = Math.sqrt((x2 - x1) ^ 2 + (y2 - y1) ^ 2);
-
-
-        System.out.println("Length of Lines is : " + "(" + x1 + "," + y1 + ")," + "(" + x2 + "," + y2 + ")===>" + length);
-
-        System.out.println(" Checking Equality of Two Lengths:");
-        System.out.println(x1 + " == " + y1 + " : " + (x1 == y1));
-        System.out.println(x2 + " == " + y2 + " : " + (x2 == y2));
-
-        System.out.println(" Comparing Two Lengths:");
-
-        System.out.println(x1.compareTo(y1));
-        System.out.println(y2.compareTo(x2));
-
-
-
-
-
-
-    }
-
-    }
-
-
-
-
-
-
-
-
-
-
-
+	}
+}
